@@ -12,9 +12,11 @@
 		11F930E51C97D26000BBC580 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11F930E31C97D26000BBC580 /* Main.storyboard */; };
 		11F930E71C97D26000BBC580 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11F930E61C97D26000BBC580 /* Assets.xcassets */; };
 		11F930EA1C97D26000BBC580 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11F930E81C97D26000BBC580 /* LaunchScreen.storyboard */; };
+		A6B8BE6903CDE8AE2BE6BBAE /* Pods_ReaderSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CB9B4F813D9F2A7A75B3F89 /* Pods_ReaderSample.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		11C093F5F4AD601F8B8430B0 /* Pods-ReaderSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReaderSample.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReaderSample/Pods-ReaderSample.release.xcconfig"; sourceTree = "<group>"; };
 		11F930DC1C97D26000BBC580 /* ReaderSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReaderSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11F930DF1C97D26000BBC580 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		11F930E11C97D26000BBC580 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +24,8 @@
 		11F930E61C97D26000BBC580 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		11F930E91C97D26000BBC580 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		11F930EB1C97D26000BBC580 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3CB9B4F813D9F2A7A75B3F89 /* Pods_ReaderSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReaderSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		61E26200142AC0583FABE2F4 /* Pods-ReaderSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReaderSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ReaderSample/Pods-ReaderSample.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A6B8BE6903CDE8AE2BE6BBAE /* Pods_ReaderSample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +45,8 @@
 			children = (
 				11F930DE1C97D26000BBC580 /* ReaderSample */,
 				11F930DD1C97D26000BBC580 /* Products */,
+				12A87CFF07AFF2E96CECA1C3 /* Pods */,
+				14B6C47E1DDDEA928FB82731 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +71,23 @@
 			path = ReaderSample;
 			sourceTree = "<group>";
 		};
+		12A87CFF07AFF2E96CECA1C3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				61E26200142AC0583FABE2F4 /* Pods-ReaderSample.debug.xcconfig */,
+				11C093F5F4AD601F8B8430B0 /* Pods-ReaderSample.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		14B6C47E1DDDEA928FB82731 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3CB9B4F813D9F2A7A75B3F89 /* Pods_ReaderSample.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 11F930EE1C97D26000BBC580 /* Build configuration list for PBXNativeTarget "ReaderSample" */;
 			buildPhases = (
+				FA6EBE324914210A0A76FEF3 /* Check Pods Manifest.lock */,
 				11F930D81C97D26000BBC580 /* Sources */,
 				11F930D91C97D26000BBC580 /* Frameworks */,
 				11F930DA1C97D26000BBC580 /* Resources */,
+				18DDB540765ABF5A6AA675F0 /* Embed Pods Frameworks */,
+				E3F1595000FC7D3362BEE30C /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -129,6 +156,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		18DDB540765ABF5A6AA675F0 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ReaderSample/Pods-ReaderSample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E3F1595000FC7D3362BEE30C /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ReaderSample/Pods-ReaderSample-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FA6EBE324914210A0A76FEF3 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		11F930D81C97D26000BBC580 /* Sources */ = {
@@ -245,6 +320,7 @@
 		};
 		11F930EF1C97D26000BBC580 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 61E26200142AC0583FABE2F4 /* Pods-ReaderSample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ReaderSample/Info.plist;
@@ -256,6 +332,7 @@
 		};
 		11F930F01C97D26000BBC580 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 11C093F5F4AD601F8B8430B0 /* Pods-ReaderSample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ReaderSample/Info.plist;
@@ -284,6 +361,7 @@
 				11F930F01C97D26000BBC580 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
