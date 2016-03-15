@@ -16,6 +16,7 @@ extension ZBarSymbolSet: SequenceType {
 }
 
 class ViewController: UIViewController, ZBarReaderDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
+    
     var ZBarReader: ZBarReaderViewController?
 
     @IBOutlet weak var resultText: UITextField!
@@ -33,17 +34,20 @@ class ViewController: UIViewController, ZBarReaderDelegate, UIImagePickerControl
     }
 
     @IBAction func onScan(sender: AnyObject) {
-        
         if (self.ZBarReader == nil) {
             self.ZBarReader = ZBarReaderViewController()
+            print("itworks")
         }
+        
         //self.ZBarReader = ZBarReaderViewController()
         self.ZBarReader?.readerDelegate = self
         self.ZBarReader?.scanner.setSymbology(ZBAR_UPCA, config: ZBAR_CFG_ENABLE, to: 1)
         self.ZBarReader?.readerView.zoom = 1.0
         self.ZBarReader?.modalInPopover = false
         self.ZBarReader?.showsZBarControls = false
-        navigationController?.pushViewController(self.ZBarReader!, animated:true)
+        //navigationController?.pushViewController(self.ZBarReader!, animated:true)
+        self.presentViewController(self.ZBarReader!, animated: true, completion: nil)
+        print("makesithere")
         
 
         //reader.supportedOrientationsMask = ZBarOrientationMaskAll //can't get #define to work in swift
@@ -76,7 +80,7 @@ class ViewController: UIViewController, ZBarReaderDelegate, UIImagePickerControl
             self.resultText.text = resultString as String    //set barCode
             self.resultImage.image = info[UIImagePickerControllerOriginalImage] as! UIImage
             
-            navigationController?.popViewControllerAnimated(true)
+            dismissViewControllerAnimated(true, completion: nil)
     }
     
     /*deinit {
